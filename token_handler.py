@@ -17,7 +17,6 @@ def token_state_init():
         st.session_state.account = account
         st.session_state.token_expired = False
         st.session_state.token_refresh_count = 0
-        initTokenRefreshMessageScript()
         st.session_state.token_init_complete = True
 
 
