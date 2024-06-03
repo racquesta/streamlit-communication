@@ -32,7 +32,7 @@ def sendTokenRefreshMessageToParent():
     </script>
     """
 
-    components.html(post_message_script, height=0)
+    components.html(post_message_script)
 
 # def sendTokenRefreshMessageToParent():
 #     st.write("Sending token refresh message to parent")
