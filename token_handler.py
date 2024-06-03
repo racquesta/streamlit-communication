@@ -28,7 +28,7 @@ def sendTokenRefreshMessageToParent():
         const message = {
             type: "NEXTMV_TOKEN_REFRESH",
         };
-        window.parent.postMessage(message, '*');
+        window.parent.postMessage(message, 'localhost:3000');
     </script>
     """
 
