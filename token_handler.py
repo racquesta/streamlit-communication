@@ -29,7 +29,7 @@ def initTokenRefreshMessageScript():
             console.log("Sending token refresh message to parent 2")
             // Send a postMessage event with the message
             const message = {
-                type: ""NEXTMV_TOKEN_REFRESH",
+                type: "NEXTMV_TOKEN_REFRESH",
             };
             window.parent.parent.postMessage(message, '*');
         }
