@@ -19,7 +19,7 @@ token_state_init()
 
 
 # wait for 6 minutes
-time.sleep(360)
+time.sleep(10)
 
 # Get new token and display it
 st.session_state.token_expired = True
