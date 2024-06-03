@@ -29,7 +29,7 @@ def sendTokenRefreshMessageToParent():
             type: "NEXTMV_TOKEN_REFRESH",
         };
         window.parent.parent.postMessage(message, 'http://localhost:3000');
-        console.log("Message sent")
+        console.log("Message sent to parent 2")
     </script>
     """
 
