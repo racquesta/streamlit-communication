@@ -38,5 +38,6 @@ def initTokenRefreshMessageScript():
     components.html(post_message_script, height=0)
 
 def sendTokenRefreshMessageToParent():
+    st.write("Sending token refresh message to parent")
     components.html("<script>sendTokenRefreshMessageToParent()</script>", height=0)
 
