@@ -21,24 +21,21 @@ def token_state_init():
         st.session_state.token_init_complete = True
 
 
-def initTokenRefreshMessageScript():
+def sendTokenRefreshMessageToParent():
     post_message_script = """
     <script>
-        // Function to send a postMessage event to the parent window
-        function sendTokenRefreshMessageToParent() {
-            console.log("Sending token refresh message to parent 2")
-            // Send a postMessage event with the message
-            const message = {
-                type: "NEXTMV_TOKEN_REFRESH",
-            };
-            window.parent.parent.postMessage(message, '*');
-        }
+        console.log("Sending token refresh message to parent 2")
+        // Send a postMessage event with the message
+        const message = {
+            type: "NEXTMV_TOKEN_REFRESH",
+        };
+        window.parent.parent.postMessage(message, '*');
     </script>
     """
 
     components.html(post_message_script, height=0)
 
-def sendTokenRefreshMessageToParent():
-    st.write("Sending token refresh message to parent")
-    components.html("<script>sendTokenRefreshMessageToParent()</script>", height=0)
+# def sendTokenRefreshMessageToParent():
+#     st.write("Sending token refresh message to parent")
+#     components.html("<script>sendTokenRefreshMessageToParent()</script>", height=0)
 
